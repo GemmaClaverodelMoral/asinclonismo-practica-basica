@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login and Timeline</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+  <body>
+    <div class="container" id="bd-verification-login">
+      <h1>Login</h1>
+      <h2>Verificación a BD local</h2>
+      <form id="login-form">
+        <label for="username">Usuario</label>
+        <input type="text" id="username" required>
+
+        <label for="password">Contraseña</label>
+        <input type="password" id="password" required>
+        <button type="submit">Ingresar</button>
+      </form>
+      <div class="message" id="message"></div>
+      <div class="timeline" id="timeline" style="display: none;"></div>
+    </div>
+    <div class="container2" id="waiting-promise-simulation">
+      <h1> Promesa</h1>
+      <h2> Simulación de espera de inicio de sesion</h2>
+      <div class="message" id="message2"></div>
+    </div>
+    <div class="container" id="star-wars-simple-promise">
+      <h1>API - Fetch</h1>
+      <h2>Busqueda aleatoria de personajes de STARWARS</h2>
+      <img src="https://pipedream.com/s.v0/app_mE7hlb/logo/orig" id="star-wars-img">
+      <div id="star-wars-name"></div>
+      <button 
+        id="btn-star-wars" 
+        type="button"
+        onclick="fetchStarWarsData()"
+        >CLICK para nuevo Personaje de STARWARS
+      </button>
+    </div>
+    <div class="container" id="pokemon-async-await-promise">
+      <h1>API - Async && Await</h1>
+      <h2>Busqueda aleatoria de personajes de Pokémon</h2>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/9/98/International_Pok%C3%A9mon_logo.svg" id="poke-img">
+      <div id="poke-name"></div>
+      <button 
+        id="btn-poke" 
+        type="button"
+        onclick="fetchPokeData()"
+        >CLICK para nuevo Personaje de Pokemon
+      </button>
+    </div>
+    <div class="container" id="rick-and-morty-async-await-for-promise">
+      <h1>API - Asyns Await For</h1>
+      <h2>Petición multiple de varios EndPoints de Rick & Morty</h2>
+      <img src="https://media.cdn.adultswim.com/uploads/20210428/21428161947-rick-and-morty-logo-png.png" id="rick-img">
+      <div id="rick-name"></div>
+      <div id="rick-location-container" class="hidden">
+        <h3 id="rick-location-name"></h3>
+      </div>
+      <div id="rick-episode-container" class="hidden">
+        <h3 id="rick-episode-name"></h3>
+      </div>
+      <button 
+        id="btn-rick" 
+        type="button"
+        onclick="fetchRickData()" 
+        >CLICK para nuevos Items de Rick & Morty 
+      </button>
+    </div>
+    <div class='container' id="new-post-form">
+      <h1>Nuevo Post</h1>
+      <h2>Creación de Contenido para subir a la API</h2>
+      <form id="post-form">
+        <label for="title">Título</label>
+        <input type="text" id="title" name="title" placeholder="titulo">
+        <label for="content" ></label>
+        <textarea 
+          rows="3" 
+          id="content" 
+          name="content"
+          placeholder="Contenido de tu nuevo Post" 
+          >
+        </textarea>
+        <button type="submit">POST : Enviar el nuevo Post a la API</button>
+      </form>
+    </div>
+    <div class="container" id="btn-get-posts">
+      <button
+        type="button"
+        onclick="getPosts()" 
+        >GET : Obtener los Posts de la API
+      </button>
+    </div>
+    <div class="container" id="posts-list">
+      Haciendo Click en el boton <b>GET</b>Aquí se mostrará la Lista de Posts de la 'Fake API'
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>
